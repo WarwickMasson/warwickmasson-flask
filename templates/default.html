@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>{{ title }}</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/default.css" />
+    </head>
+    <body>
+        <div id="header">
+        <img src="/static/images/header.jpg"  alt="header"></img>
+        </div>
+
+        <div id="navigation">
+            <p><h2 class="rounded">Warwick Masson</h2></p>
+        </div>
+        <div id="content">
+        <h2>{% block title %}{% endblock %} </h2>
+        {% block body %}
+        {% endblock %}
+        </div>
+        <div id="footer">
+            <p>This site generated using <a href="http://github.com/Frozen-Flask/Frozen-Flask">Frozen Flask</a>.
+            Background by <a href="http://subtlepatterns.com/cubes">Sander Ottens</a>.</p>
+        </div>
+    </body>
+</html>

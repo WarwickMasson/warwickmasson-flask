@@ -1,0 +1,52 @@
+a:link {color: black}
+a:visited {color: purple}
+
+pre.code {
+    display: block;
+    padding: 5px 5px 5px 5px;
+}
+
+.rounded {
+    text-decoration: none;
+}
+
+body {
+    background-image:url("/static/images/background.png");
+    font-family: lucida;
+    font-size: 13pt;
+}
+
+div#header {
+    margin: 0 15%;
+    width: 60%;
+}
+
+div#content {
+    width: 60%;
+    margin: 0 15%;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+div#navigation {
+    float: left;
+    width: 10%;
+    text-align: right;
+    margin-left: 3%;
+}
+
+div#navigation a {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+div#navigation a:visited{
+    color: black;
+}
+
+div#footer p{
+    clear: both;
+    font-size: 8pt;
+    margin: 0 20%;
+    padding: 3px;
+}
