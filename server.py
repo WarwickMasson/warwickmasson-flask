@@ -1,3 +1,4 @@
+import sys
 import os
 import shutil
 from flask import Flask, render_template
@@ -21,8 +22,12 @@ def generate_app():
     return app
         
 if __name__ == '__main__':
-    APP = generate_app()
-    APP.config['FREEZER_REMOVE_EXTRA_FILES'] = True
-    APP.config['FREEZER_DESTINATION_IGNORE'] = ['.git', 'CNAME', 'favicon.ico']
-    freezer = Freezer(APP)
-    Freezer(APP).freeze()
+    if sys.argv[1] == 'build':
+        APP = generate_app()
+        APP.config['FREEZER_REMOVE_EXTRA_FILES'] = True
+        APP.config['FREEZER_DESTINATION_IGNORE'] = ['.git', 'CNAME', 'favicon.ico']
+        freezer = Freezer(APP)
+        Freezer(APP).freeze()
+    elif sys.argv[1] == 'test':
+        APP = generate_app()
+        APP.run(host='0.0.0.0', port=8000, debug=True)
