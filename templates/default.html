@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Warwick Masson</title>
-        <link rel="stylesheet" type="text/css" href="/static/css/default.css" />
-    </head>
-    <body>
-        <div id="header">
-        <img src="/static/images/header.jpg"  alt="header"></img>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Warwick Masson</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+            <h2 class="rounded">Warwick Masson - <small>{% block title %}{% endblock %}</small></h2>
+            {% block body %}
+            {% endblock %}
+            </div>
         </div>
-
-        <div id="navigation">
-            <p><h2 class="rounded">Warwick Masson</h2></p>
-        </div>
-        <div id="content">
-        <h2>{% block title %}{% endblock %} </h2>
-        {% block body %}
-        {% endblock %}
-        </div>
-        <div id="footer">
-            <p>This site generated using <a href="http://github.com/Frozen-Flask/Frozen-Flask">Frozen Flask</a>.
-            Background by <a href="http://subtlepatterns.com/cubes">Sander Ottens</a>.</p>
-        </div>
-    </body>
+    </div>
+</body>
 </html>
